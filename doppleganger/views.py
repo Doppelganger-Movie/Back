@@ -145,7 +145,6 @@ def doppleganger(request):
         celeb_movie_title = []
         for movie_title in movie_list:
             movie = Movie.objects.filter(title=movie_title.rstrip())
-            # movie = Movie.objects.filter(title='스파이더맨 3')
             serializer = MovieSerializer(movie, many=True)
             # print('데이터확인', len(serializer.data))
             if len(serializer.data):
