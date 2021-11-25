@@ -6,6 +6,8 @@ from rest_framework import status
 from .models import Review
 from movies.models import Movie
 from .serializers import ReviewSerializer
+from rest_framework.decorators import api_view,permission_classes
+from rest_framework.permissions import IsAuthenticated
 
 
 @api_view(['GET','POST'])#이게 없으면 AssertionError(accepted_renderer) 에러 남.

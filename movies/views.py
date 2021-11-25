@@ -6,7 +6,7 @@ from .models import Director, Movie
 from rest_framework.response import Response
 from .serializers import DirectorSerializer, MovieSerializer, GenreSerializer
 from reviews.serializers import ReviewSerializer
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view,permission_classes
 
 # Create your views here.
 @api_view(['GET'])

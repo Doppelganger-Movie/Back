@@ -157,7 +157,7 @@ def doppleganger(request):
         # print('moie나오나???!!!!', serializer.data[0]['poster_path'])
         # print(celeb_movie_title)
         
-        celeb_img = res_body['items'][0]['thumbnail']
+        celeb_img = res_body['items'][0]['link']
         data = {
             #사진 함께 넘겨주기
             'upload_image': image_path,
