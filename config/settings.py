@@ -27,9 +27,10 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = [
-    'doppelganger-movie.herokuapp.com',
-    '127.0.0.1'
+    '127.0.0.1',
+    config('HEROKU_URL')
 ]
+
 
 CORS_ALLOW_ALL_ORIGINS = True
 
