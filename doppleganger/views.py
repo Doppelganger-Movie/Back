@@ -26,6 +26,7 @@ client_id = config('client_id')
 client_secret = config('client_secret')
 naver_serach_id = config('naver_serach_id')
 naver_search_secret = config('naver_search_secret')
+KOBIS_KEY = config('KOBIS_KEY')
 
 # 1번 함수
 # 사용자가 이미지를 업로드 했을 때
@@ -117,7 +118,7 @@ def doppleganger(request):
                 celeb_name = celeb['celebrity']['value']
         # print('닮은ㅅ사람!',celeb_list )
         # print(celeb_name)
-        act_url = 'http://kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json?key=f5eef3421c602c6cb7ea224104795888&peopleNm='+celeb_name
+        act_url = 'http://kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json?key='+KOBIS_KEY+'&peopleNm='+celeb_name
         r_data = requests.get(act_url)
         json_data = r_data.json()
         actor_list = json_data['peopleListResult']['peopleList']
